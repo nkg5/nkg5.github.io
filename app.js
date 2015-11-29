@@ -1,1 +1,1 @@
-$("nav a").click(function(){$("nav a .triangle").removeClass("selected"),$(this).children(".triangle").addClass("selected")});
+$(".nav-link").click(function(){$(".nav-link").removeClass("active"),$(this).addClass("active")});
