@@ -1,0 +1,34 @@
+{
+	"projects":[{
+		"img": "iswd.jpg",
+		"title": "Clip Planet",
+		"alt": "clip-planet",
+		"link": "http://iswd.dx.am"
+	},
+	{
+		"img": "homepage.jpg",
+		"title": "Homepage",
+		"alt": "chome homepage",
+		"link": "https://bitbucket.org/nkg5/chrome-homepage"
+	},
+	{
+		"img": "chat.jpg",
+		"title": "Chat for osu!",
+		"alt": "chat for osu",
+		"link": "https://bitbucket.org/nkg5/chat-for-osu"
+	},
+	{
+		"img": "sonystyle.jpg",
+		"title": "Sony Style",
+		"alt": "sony style",
+		"link": "http://madteam.co/forum/index.php?topic=3358.0"
+	},
+	{
+		"img": "sonyhd.jpg",
+		"title": "Sony HD",
+		"alt": "sony hd",
+		"link": "http://madteam.co/forum/index.php?topic=3972.0"
+	}
+]
+
+}
