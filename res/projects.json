@@ -1,5 +1,10 @@
 {
 	"projects":[{
+		"img": "dashboard.jpg",
+		"title": "Dashboard",
+		"alt": "dashboard",
+		"link": "https://github.com/nkg5/Dashboard"
+	},{
 		"img": "iswd.jpg",
 		"title": "Clip Planet",
 		"alt": "clip-planet",
