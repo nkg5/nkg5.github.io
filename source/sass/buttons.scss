@@ -1,0 +1,62 @@
+#button-hamburger{
+  display: none;
+}
+#buttons{
+  display: block;
+  position: fixed;
+  list-style-type: none;
+	right: 5pt;
+  top: 20%;
+  z-index: 200;
+
+  li{
+  	box-sizing: border-box;
+  	transition: all 200ms;
+  	cursor: pointer;
+  	margin: 2pt 0px;
+  	float: right;
+  	clear: both;
+  	width: 36pt;
+  	height: 36pt;
+  	white-space: nowrap;
+  	display: block;
+  	overflow: hidden;
+  	border-radius: 18pt;
+  	box-shadow: 0px 1pt 3pt rgba(0,0,0,0.4);
+  	background-color: white;
+
+    a{
+      display: block;
+      text-decoration: none;
+
+      span{
+      	display: inline-block;
+      	height: 12pt;
+        &.image{
+        	width: 36pt;
+        	height: 36pt;
+
+          img{
+            width: 24pt;
+            height: 24pt;
+            padding: 6pt;
+          }
+        }
+        &.title{
+          font-size: 14pt;
+          text-align: center;
+          width: 60pt;
+          display: inline;
+          top: -14pt;
+          position: relative;
+          left: 6pt;
+          color: black;
+        }
+      }
+    }
+  }
+
+  li:hover{
+  	width: 120pt;
+  }
+}

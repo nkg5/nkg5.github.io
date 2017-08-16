@@ -1,0 +1,10 @@
+$break-laptop: 1200px;
+@media screen and (max-width: $break-laptop){
+  #about{
+    #about-container{
+      img{
+        margin-top: 5%;
+      }
+    }
+  }
+}

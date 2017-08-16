@@ -18,9 +18,10 @@ module.exports = function(grunt) {
                     style: 'compressed',
                     sourceMap: false
                 },
-                files: {
-                    '..\\style.css': ['sass\\**\\*.sass']
-                }
+                files: [{
+                        src: 'sass/main.scss',
+                        dest: '../style.css'
+                }]
             }
         },
         uglify: {

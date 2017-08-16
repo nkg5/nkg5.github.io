@@ -1,0 +1,65 @@
+#contact{
+  width: 100%;
+  height: 100%;
+  h1{
+    color: #b0d0eb;
+    text-align: center;
+    padding: 20pt;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  h2{
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+    font-size: 28pt;
+    color: #b0d0eb;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  h3{
+    text-align: center;
+    font-size: 16pt;
+    color: #ebf8ff;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+
+    a{
+      color: inherit;
+      text-decoration: inherit;
+      transition: all 180ms ease;
+
+      &:hover{
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+        color: #b0d0eb;
+      }
+    }
+  }
+
+  ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    li{
+      display: inline-block;
+      background-color: transparent;
+      margin: 0pt 5pt;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      overflow: hidden;
+      width: 36pt;
+      height: 36pt;
+      transition: all 180ms ease;
+
+      &:hover{
+        filter: brightness(80%);
+      }
+
+      a{
+        display: block;
+        img{
+          width: 36pt;
+          height: 36pt;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
