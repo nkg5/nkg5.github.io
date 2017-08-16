@@ -1,0 +1,37 @@
+{
+  "name": "nkg5.github.io",
+  "version": "4.0.0",
+  "description": "4th version of my website\u001b[H",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkg5/nkg5.github.io.git"
+  },
+  "keywords": [
+    "website",
+    "nkg5",
+    "nikola",
+    "kovacevic",
+    "html",
+    "css",
+    "javascript",
+    "angular.js",
+    "webdesign"
+  ],
+  "author": "Nikola Kovačević (nkg5)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkg5/nkg5.github.io/issues"
+  },
+  "homepage": "https://github.com/nkg5/nkg5.github.io#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
