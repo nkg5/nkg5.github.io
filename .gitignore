@@ -1,3 +1,2 @@
-source\node_modules
-source\build
-source\.sass-cache
+node_modules\
+build\
