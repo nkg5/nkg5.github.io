@@ -1,0 +1,87 @@
+#projects
+  width: 100%
+  overflow: hidden
+
+  h1
+    color: #b0d0eb
+    text-align: center
+    padding: 20pt
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2)
+  
+
+  div.nojs-div
+    display: none
+    width: 50%
+    margin: 0 auto
+
+  div.nojs-div.nojs
+    display: block
+
+  #project-container
+    width: 720pt
+    margin: auto
+    &.nojs
+      display: none
+    
+
+    .project
+      display: inline-block
+      width: 140pt
+      height: 140pt
+      margin: 20pt
+      overflow-y: hidden
+      overflow-x: hidden
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4)
+      transition: all 100ms ease-in
+      border-radius: 2px
+
+      @supports (animation-name: test)
+        animation-name: project-appear
+        animation-duration: 800ms
+        animation-timing-function: ease-in
+        animation-fill-mode: forwards
+        animation-play-state: paused
+        opacity: 0
+      
+
+      &:hover
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8)
+        img
+          width: 160pt
+          height: 160pt
+          margin: -10pt
+          filter: grayscale(0)
+      
+
+      img
+        display: block
+        width: 140pt
+        height: 140pt
+        transition: all 180ms ease
+        filter: grayscale(0.6)
+        z-index: 1
+      
+
+      p
+        z-index: 9999
+        background-color: rgba(0, 0, 0, 0.6)
+        position: absolute
+        display: block
+        margin: 0
+        width: 140pt
+        height: 24pt
+        padding: 4pt
+        box-sizing: border-box
+        transition: all 300ms ease
+        text-align: center
+        color: white
+      
+
+@keyframes  project-appear 
+  from
+    opacity: 0
+    transform: translateX(100px)
+  
+  to
+    opacity: 1
+    transform: translateX(0px)

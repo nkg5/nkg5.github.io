@@ -1,0 +1,8 @@
+#projects
+    h1 Projects
+    .nojs-div.nojs Enable javascript for AngularJS to work.
+    #project-container(ng-app="projectsApp" ng-controller="projectsController")
+        .project(ng-repeat="project in projects track by $index" style="animation-delay: {{ $index*180 }}ms")
+            a(href="{{ project.link }}")
+                p {{ project.title }}
+                img(ng-src="res/projects/{{ project.img }}" alt="{{ project.alt }}")
