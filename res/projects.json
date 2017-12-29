@@ -15,6 +15,12 @@
 		"title": "Chat for osu!",
 		"alt": "chat for osu",
 		"link": "https://bitbucket.org/nkg5/chat-for-osu"
+	},
+	{
+		"img": "fotd.png",
+		"title": "Fear of the Dark",
+		"alt": "fear-of-the-dark",
+		"link": "http://nkovacevic.com/Fear-of-the-Dark/"
 	}
 ]
 
