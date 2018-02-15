@@ -4,7 +4,7 @@ $("document").ready(function(){
 });
 $("#home_button").click(function(e){
   $('html, body').animate({
-    scrollTop: $('#title.jade').offset().top
+    scrollTop: $('#title').offset().top
   }, 'slow');
   e.stopPropagation();
 });
