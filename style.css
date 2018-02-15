@@ -508,7 +508,8 @@ html {
       #about #about-container #about-content img {
         float: left;
         width: 20%;
-        margin: 2% 5%; }
+        margin: 2% 5%;
+        border-radius: 50%; }
       #about #about-container #about-content p {
         text-align: justify;
         float: right;
