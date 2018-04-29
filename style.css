@@ -373,7 +373,7 @@ html {
   html body {
     width: 100%;
     height: 100%;
-    font-family: 'Lato', sans-serif; }
+    font-family: "Lato", sans-serif; }
     html body div.nojs-div {
       display: none;
       background-color: black;
@@ -449,7 +449,7 @@ html {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); }
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
   #title .title-light {
     color: #6eb8f5;
     font-size: 28pt; }
@@ -457,7 +457,7 @@ html {
     color: #ebf8ff;
     font-size: 48pt; }
   #title .title {
-    font-family: 'Marck Script', cursive;
+    font-family: "Marck Script", cursive;
     text-align: center;
     margin: 10pt; }
     @supports (animation-name: test) {
@@ -470,7 +470,6 @@ html {
     opacity: 0; }
   to {
     opacity: 1; } }
-
 #about {
   width: 100%;
   height: 100%;
@@ -528,7 +527,6 @@ html {
   to {
     opacity: 1;
     transform: scale(1); } }
-
 #projects {
   width: 100%;
   overflow: hidden; }
@@ -601,7 +599,6 @@ html {
   to {
     opacity: 1;
     transform: translateX(0px); } }
-
 #contact {
   width: 100%;
   height: 100%; }
@@ -611,7 +608,7 @@ html {
     padding: 20pt;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
   #contact h2 {
-    font-family: 'Marck Script', cursive;
+    font-family: "Marck Script", cursive;
     text-align: center;
     font-size: 28pt;
     color: #b0d0eb;
@@ -655,7 +652,6 @@ html {
 @media screen and (max-width: 1200px) {
   #about > #about-container {
     width: 80%; } }
-
 @media screen and (max-width: 960px) {
   #about #about-container {
     margin: 0 auto;
@@ -675,9 +671,9 @@ html {
       display: block;
       font-size: 11pt;
       padding: 12pt; }
+
   #projects #project-container {
     width: 720px; } }
-
 @media screen and (max-width: 480px) {
   #title {
     padding-top: 20%; }
@@ -685,6 +681,7 @@ html {
       font-size: 18pt; }
     #title .title-heavy {
       font-size: 24pt; }
+
   #button-hamburger {
     display: block;
     position: fixed;
@@ -696,10 +693,12 @@ html {
     border-radius: 50%;
     box-shadow: 0 1pt 3pt rgba(0, 0, 0, 0.4);
     background-color: white; }
+
   #button-hamburger > img {
     width: 24pt;
     height: 24pt;
     padding: 6pt; }
+
   #buttons {
     display: block;
     position: fixed;
@@ -720,6 +719,7 @@ html {
       opacity: 1; }
     #buttons li:hover {
       width: 36pt; }
+
   #about #about-container {
     margin: 0 auto;
     width: 80%;
@@ -739,6 +739,7 @@ html {
       margin: 10pt auto;
       display: block;
       font-size: 11pt; }
+
   #projects #project-container {
     width: 180pt;
-    margin: 0px auto; } }
+    margin: 0 auto; } }
