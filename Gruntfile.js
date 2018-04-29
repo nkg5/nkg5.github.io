@@ -32,6 +32,15 @@ module.exports = function (grunt) {
                 dest: ''
             }
 
+        },
+        connect: {
+            main: {
+                options: {
+                    port: 8080,
+                    base: '.',
+                    keepalive: true
+                }
+            }
         }
 
 
@@ -44,8 +53,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
-    grunt.registerTask('build', ['jade', 'css', 'uglify']);
+    grunt.registerTask('compile', ['jade', 'css', 'uglify']);
     grunt.registerTask('default', ['clean', 'build', 'copy']);
 };
