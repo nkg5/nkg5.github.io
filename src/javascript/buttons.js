@@ -1,7 +1,7 @@
-$("document").ready(function(){
-  $(".nojs").removeClass("nojs");
-  $("#nojs").addClass("js");
-});
+
+$(".nojs").removeClass("nojs");
+$("#nojs").addClass("js");
+
 $("#home_button").click(function(e){
   $('html, body').animate({
     scrollTop: $('#title').offset().top
