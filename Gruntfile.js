@@ -3,31 +3,31 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         clean: {
-            main: ['build/']
+            main: ['_dist/']
         },
         jade: {
-            main: { files: { 'build/index.html' : 'src/index.jade' } }
+            main: { files: { '_dist/index.html' : 'src/index.jade' } }
         },
         sass: {
-            main: { files: { 'build/style.css' : 'src/sass/00_main.sass'} }
+            main: { files: { '_dist/style.css' : 'src/sass/00_main.sass'} }
         },
         autoprefixer: {
             options: { browsers: ['last 2 versions', 'ie 8', 'ie 9'] },
-            main: { files: { 'build/style.css' : 'build/style.css' } }
+            main: { files: { '_dist/style.css' : '_dist/style.css' } }
         },
         cssmin: {
-            main: { files: { 'build/style.min.css' : 'build/style.css' } }
+            main: { files: { '_dist/style.min.css' : '_dist/style.css' } }
         },
         uglify: {
             main: {
                 src: 'src/javascript/**/*.js',
-                dest: 'build/app.js'
+                dest: '_dist/app.js'
             }
         },
         copy: {
             main: {
                 expand: true,
-                cwd: 'build',
+                cwd: '_dist',
                 src: '**',
                 dest: ''
             }
@@ -37,11 +37,41 @@ module.exports = function (grunt) {
             main: {
                 options: {
                     port: 8080,
-                    base: '.',
-                    keepalive: true
+                    livereload: true,
+                    base: '_dist'
                 }
             }
+        },
+        watch: {
+            scripts: {
+                files: ['src/javascript/**/*.js'],
+                tasks: ['uglify'],
+                options: {
+                    spawn: false
+                }
+            },
+            html: {
+                files: ['src/jade/**/*.jade'],
+                tasks: ['jade'],
+                options: {
+                    spawn: false
+                }
+            },
+            css: {
+                files: ['src/sass/**/*.sass'],
+                tasks: ['css'],
+                options: {
+                    spawn: false
+                }
+            }
+        },
+        symlink: {
+            res: {
+                src: 'res',
+                dest: '_dist/res'
+            }
         }
+
 
 
     });
@@ -54,8 +84,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-symlink');
 
+    grunt.registerTask('init', ['clean', 'symlink']);
     grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
     grunt.registerTask('compile', ['jade', 'css', 'uglify']);
-    grunt.registerTask('default', ['clean', 'build', 'copy']);
+    grunt.registerTask('build', ['init', 'compile', 'copy:main']);
+    grunt.registerTask('default', ['init', 'compile', 'connect', 'watch']);
 };
