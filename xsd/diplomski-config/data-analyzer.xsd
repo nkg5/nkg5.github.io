@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="configuration" type="configuration"/>
+  <xs:complexType name="nodes">
+    <xs:sequence>
+      <xs:element name="url" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cassandra">
+    <xs:sequence>
+      <xs:element type="nodes" name="nodes"/>
+      <xs:element type="xs:string" name="username"/>
+      <xs:element type="xs:string" name="password"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="configuration">
+    <xs:sequence>
+      <xs:element type="cassandra" name="cassandra"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
