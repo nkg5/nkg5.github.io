@@ -1,15 +1,35 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
   <xs:element name="url" type="xs:string"/>
-  <xs:element name="broker-list">
+
+  <xs:element name="node-list">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="url" maxOccurs="unbounded" minOccurs="1"/>
+        <xs:element ref="url" maxOccurs="unbounded" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
+  <xs:element name="cassandra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="node-list"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="broker-list">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="url" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
   <xs:element name="consumer-topic" type="xs:string"/>
+
   <xs:element name="consumer-group" type="xs:string"/>
-  <xs:element name="cassandra-node" type="xs:string"/>
+
   <xs:element name="kafka">
     <xs:complexType>
       <xs:sequence>
@@ -19,12 +39,14 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
   <xs:element name="configuration">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="cassandra-node"/>
+        <xs:element ref="cassandra"/>
         <xs:element ref="kafka"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
 </xs:schema>
