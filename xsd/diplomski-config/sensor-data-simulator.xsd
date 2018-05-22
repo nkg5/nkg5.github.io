@@ -6,8 +6,9 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element type="xs:string" name="room-id"/>
-                            <xs:element type="xs:boolean" name="timestamp"/>
-                            <xs:element type="xs:integer" name="update-period"/>
+                            <xs:element type="xs:boolean" name="timestamp" minOccurs="0" />
+                            <xs:element type="xs:integer" name="update-period" minOccurs="0" />
+                            <xs:element type="xs:integer" name="network" minOccurs="0" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
