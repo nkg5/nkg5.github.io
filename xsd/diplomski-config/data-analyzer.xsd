@@ -16,7 +16,6 @@
 <xs:complexType name="configuration">
   <xs:sequence>
     <xs:element type="cassandra" name="cassandra"/>
-    <xs:element type="xs:anyURI" name="dispatcher-url" />
   </xs:sequence>
 </xs:complexType>
 </xs:schema>
