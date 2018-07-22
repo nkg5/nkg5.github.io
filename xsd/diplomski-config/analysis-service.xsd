@@ -9,7 +9,7 @@
     <xs:complexType name="info">
         <xs:sequence>
             <xs:element type="xs:unsignedInt" name="port" />
-            <xs:element type="xs:anyURI" name="spark-url" />
+            <xs:element type="xs:anyURI" name="spark-url" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="cassandra">
