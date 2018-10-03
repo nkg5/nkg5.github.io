@@ -16,7 +16,7 @@
 <xs:complexType name="configuration">
   <xs:sequence>
     <xs:element type="cassandra" name="cassandra"/>
-    <xs:element type="xs:anyURI" name="service-url" minOccurs="0" maxOccurs="1"/>
+    <xs:element type="xs:string" name="service-url" minOccurs="0" maxOccurs="1"/>
   </xs:sequence>
 </xs:complexType>
 </xs:schema>
