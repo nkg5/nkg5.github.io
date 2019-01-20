@@ -500,24 +500,31 @@ html {
       margin: 0;
       padding: 2.5% 10%; }
     #about #about-container #about-content {
-      background-color: #f9f9f9;
+      text-align: center;
       color: #2c2c2c;
-      padding: 1%;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35); }
-      #about #about-container #about-content img {
-        float: left;
-        width: 20%;
-        margin: 2% 5%;
-        border-radius: 50%;
-        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15); }
-      #about #about-container #about-content p {
-        text-align: justify;
-        float: right;
-        width: 60%;
-        margin-right: 5%;
-        margin-top: 8%;
-        font-size: 14pt;
-        line-height: 22pt; }
+      background-color: transparent;
+      width: 80%;
+      margin: 0 auto; }
+      #about #about-container #about-content #img-container {
+        display: block; }
+        #about #about-container #about-content #img-container img {
+          display: block;
+          width: 20%;
+          background-color: #f9f9f9;
+          border-radius: 50%;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+          margin: 25pt auto; }
+      #about #about-container #about-content #p-container {
+        display: block;
+        background-color: #f9f9f9;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 2pt;
+        width: 80%;
+        padding: 2%;
+        text-align: left;
+        margin: 2% auto; }
+        #about #about-container #about-content #p-container p {
+          font-size: 14pt; }
     #about #about-container footer {
       clear: both; }
 
@@ -656,22 +663,14 @@ html {
 @media screen and (max-width: 960px) {
   #about #about-container {
     margin: 0 auto;
-    width: 80%;
     animation-name: none;
-    opacity: 1; }
+    opacity: 1;
+    text-align: center; }
     #about #about-container h1 {
       width: 80%;
       margin: 0 auto; }
-    #about #about-container #about-content img {
-      display: block;
-      width: 30%;
-      margin: 10pt; }
-    #about #about-container #about-content p {
-      width: 60%;
-      margin: 20pt 0;
-      display: block;
-      font-size: 11pt;
-      padding: 12pt; }
+    #about #about-container #about-content #img-container img {
+      width: 30%; }
 
   #projects #project-container {
     width: 720px; } }
@@ -729,17 +728,20 @@ html {
     #about #about-container h1 {
       width: 80%;
       margin: 0 auto; }
-    #about #about-container #about-content img {
-      display: block;
-      float: none;
-      width: 40%;
-      margin: 10pt auto; }
-    #about #about-container #about-content p {
-      width: 80%;
-      float: none;
-      margin: 10pt auto;
-      display: block;
-      font-size: 11pt; }
+    #about #about-container #about-content {
+      width: 100%;
+      display: block; }
+      #about #about-container #about-content #img-container {
+        display: block;
+        margin: 0 auto; }
+      #about #about-container #about-content #p-container {
+        display: block;
+        margin: 0 auto; }
+        #about #about-container #about-content #p-container p {
+          font-size: 11pt;
+          padding: 5%;
+          width: 90%;
+          margin: 0; }
 
   #projects #project-container {
     width: 180pt;
