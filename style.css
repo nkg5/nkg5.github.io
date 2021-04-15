@@ -472,7 +472,7 @@ html {
     opacity: 1; } }
 #about {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: block;
   overflow: hidden; }
   #about #about-top {
@@ -480,9 +480,12 @@ html {
     display: block; }
   #about #about-container {
     width: 800pt;
-    height: 200pt;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin: 120pt auto;
-    border-radius: 2pt; }
+    border-radius: 2pt;
+    line-height: 1.5; }
     @supports (animation-name: test) {
       #about #about-container {
         animation-name: about-fade;
@@ -520,11 +523,12 @@ html {
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
         border-radius: 2pt;
         width: 80%;
-        padding: 2%;
+        padding: 2% 4%;
         text-align: left;
         margin: 2% auto; }
         #about #about-container #about-content #p-container p {
-          font-size: 14pt; }
+          font-size: 14pt;
+          margin: 0; }
     #about #about-container footer {
       clear: both; }
 
