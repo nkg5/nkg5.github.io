@@ -480,8 +480,6 @@ html {
     display: block; }
   #about #about-container {
     width: 800pt;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
     margin: 120pt auto;
     border-radius: 2pt;

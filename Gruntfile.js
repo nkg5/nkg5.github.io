@@ -5,14 +5,13 @@ module.exports = function (grunt) {
         clean: {
             main: ['_dist/']
         },
-        jade: {
-            main: { files: { '_dist/index.html' : 'src/index.jade' } }
+        pug: {
+            main: { files: { '_dist/index.html' : 'src/index.pug' } }
         },
         sass: {
             main: { files: { '_dist/style.css' : 'src/sass/00_main.sass'} }
         },
-        autoprefixer: {
-            options: { browsers: ['last 2 versions', 'ie 8', 'ie 9'] },
+        postcss: {
             main: { files: { '_dist/style.css' : '_dist/style.css' } }
         },
         cssmin: {
@@ -51,8 +50,8 @@ module.exports = function (grunt) {
                 }
             },
             html: {
-                files: ['src/jade/**/*.jade'],
-                tasks: ['jade'],
+                files: ['src/pug/**/*.pug'],
+                tasks: ['pug'],
                 options: {
                     spawn: false
                 }
@@ -77,19 +76,19 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-pug');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-symlink');
 
     grunt.registerTask('init', ['clean', 'symlink']);
-    grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin']);
-    grunt.registerTask('compile', ['jade', 'css', 'uglify']);
+    grunt.registerTask('css', ['sass', 'postcss', 'cssmin']);
+    grunt.registerTask('compile', ['pug', 'css', 'uglify']);
     grunt.registerTask('build', ['init', 'compile', 'copy:main']);
     grunt.registerTask('default', ['init', 'compile', 'connect', 'watch']);
 };
